@@ -6,7 +6,7 @@ Aimera platform API class and examples for PHP
 This code prepares a call to Challenger server on event happened to a client identified by {client_id}:
 
 ```php
-include 'challenger.client.php';
+include_once 'challenger.client.php';
 
 $chall = new Challenger('api.aimera.io');
 $chall -> setKey('{secret_key}');
