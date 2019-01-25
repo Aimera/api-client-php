@@ -13,9 +13,8 @@ $chall -> setKey('{secret_key}');
 $chall -> setOwnerId({owner_id});
 $chall -> setClientId({client_id});
 $chall -> addParam('multiple', '{multiple}'); // Optional
-$resp = $chall -> trackEvent({event_id});
 
-if($resp === false){
-    // Error happened. Check is servers are not down.
+if($chall -> trackEvent({event_id}) === false){
+    // Error happened. Retry later.
 }
 ```
